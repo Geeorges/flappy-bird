@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <script type="module" src="/src/localStorage.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <div class="game-container">
+      <div class="score score-top">0</div>
+      <a href="#" id="settingsCta">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 25 25" width="40" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.44 12.99l-.01.02c.04-.33.08-.67.08-1.01 0-.34-.03-.66-.07-.99l.01.02 2.44-1.92-2.43-4.22-2.87 1.16.01.01c-.52-.4-1.09-.74-1.71-1h.01L14.44 2H9.57l-.44 3.07h.01c-.62.26-1.19.6-1.71 1l.01-.01-2.88-1.17-2.44 4.22 2.44 1.92.01-.02c-.04.33-.07.65-.07.99 0 .34.03.68.08 1.01l-.01-.02-2.1 1.65-.33.26 2.43 4.2 2.88-1.15-.02-.04c.53.41 1.1.75 1.73 1.01h-.03L9.58 22h4.85s.03-.18.06-.42l.38-2.65h-.01c.62-.26 1.2-.6 1.73-1.01l-.02.04 2.88 1.15 2.43-4.2s-.14-.12-.33-.26l-2.11-1.66zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+      </a>
+      <div class="sky">
+        <div class="bird"></div>
+      </div>
+      <div class="ground">
+        <div class="highest-scores__wrapper">
+          <div class="highest-scores--local">Your highest score: <span>0</span></div>
+          <div class="highest-scores--global">Global high score: <span>0</span></div>
+        </div>
+      </div>
+
+      <div class="user-options">
+        <div class="ui-container settings-container">
+          <a href="" id="settingsCloseCta">X</a>
+          <h3>Settings</h3>
+          <h4>Background music</h4>
+          <input type="range" id="sliderBgSound" min="0" max="100" value="100">
+          <h4>Sound effects</h4>
+          <input type="range" id="sliderEffectSound" min="0" max="100" value="100">
+
+        </div>
+        <div class="ui-container startgame-container active">
+          <h3>Ready?</h3>
+          <!-- <button class="button" id="newgame-btn">Play</button> -->
+           <div class="arrow">
+            <img src="./src/images/pressSpaceArrow.png" height="50" alt="">
+           </div>
+          <div class="spacebar">
+            <span>
+              <span class="spacebar__lines--top"></span>
+              <span class="spacebar__text">SPACE</span>
+              <span class="spacebar__lines--bottom"></span>
+            </span>
+          </div>
+        </div>
+        <div class="ui-container gameover-container">
+          <h3>GAME OVER</h3>
+          <h4>Last run: <span class="score">0</span></h4>
+          <h4>Your record: <span class="highest-scores--local"><span>0</span></span></h4>
+          <button class="button" id="restart-btn">Try again</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </body>
+
+</html>
